@@ -21,6 +21,7 @@
     "@rescript/react"
   ],
   "bsc-flags": [
-    "-open RescriptCore"
+    "-open RescriptCore",
+    "-open ShienBelt"
   ]
 }
