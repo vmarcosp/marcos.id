@@ -1,5 +1,1 @@
-import { make as HomePage } from './Home.res.js'
-
-export default function Home() {
-  return <HomePage />
-}
+export { make as default } from './Home.res.js'
