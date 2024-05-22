@@ -35,7 +35,7 @@
     border-radius: 8px;
     height: 2px;
     width: 16px;
-    bottom: -6px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%) scale(0);
 
@@ -48,6 +48,7 @@
     content: " ";
     position: absolute;
     border-radius: var(--radius-1-5);
+    border-width: 2px;
     border-style: solid;
     border-color: transparent;
     width: 100%;
