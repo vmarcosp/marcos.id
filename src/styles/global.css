@@ -11,6 +11,10 @@
     --spacing-6: 24px;
     --spacing-7: 28px;
 
+    /* Radius  */
+    --radius-1: 4px;
+    --radius-1-5: 6px;
+
     /* Layout */
     --layout-max-w: 784px;
   }
