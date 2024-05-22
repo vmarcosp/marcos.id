@@ -1,4 +1,6 @@
-__import("@/styles/global.css")
+_import("@/styles/global.css")
+
+let classes = css("./layout.module.css")
 
 let metadata = {
   "title": "Marcos Oliveira * Software Engineer",
@@ -8,7 +10,7 @@ let metadata = {
 @react.component
 let make = (~children) => {
   <html lang="en">
-    <body className={`${Fonts.recoleta.className} flex flex-col items-center`}>
+    <body className={clsx([Fonts.recoleta.className, "dark", classes["container"]])}>
       <Header />
       <main> {children} </main>
       <footer />

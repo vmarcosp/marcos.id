@@ -6,6 +6,11 @@ export const recoleta = localFont({
       path: "./font-files/Recoleta-Bold.ttf",
       weight: "700",
       style: "normal"
+    },
+    {
+      path: "./font-files/Recoleta-Regular.ttf",
+      weight: "400",
+      style: "normal"
     }
   ]
 })
