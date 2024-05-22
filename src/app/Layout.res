@@ -1,4 +1,4 @@
-__import("@/styles/reset.css")
+__import("@/styles/global.css")
 
 let metadata = {
   "title": "Marcos Oliveira * Software Engineer",
@@ -8,6 +8,10 @@ let metadata = {
 @react.component
 let make = (~children) => {
   <html lang="en">
-    <body className={Fonts.recoleta.className}> {children} </body>
+    <body className={`${Fonts.recoleta.className} flex flex-col items-center`}>
+      <Header />
+      <main> {children} </main>
+      <footer />
+    </body>
   </html>
 }
