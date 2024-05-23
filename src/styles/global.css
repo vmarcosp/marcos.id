@@ -10,6 +10,10 @@
     --spacing-5: 20px;
     --spacing-6: 24px;
     --spacing-7: 28px;
+    --spacing-8: 28px;
+    --spacing-12: 48px;
+    --spacing-18: 72px;
+    --spacing-50: 200px;
 
     /* Radius  */
     --radius-1: 4px;
@@ -17,13 +21,20 @@
 
     /* Layout */
     --layout-max-w: 784px;
+
+    /* Breakpoints */
+    --screen-sm: 640px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+    --screen-xl: 1280px;
+    --screen-2xl: 1536px;
   }
 
-  .dark {
+  .light {
     /* Colors  */
     --color-100: #151515;
     --color-200: #5a5a5a;
-    --color-300: #cccccc;
+    --color-300: #707070;
     --color-400: #e2e2e2;
     --color-500: #f8f8f8;
     --color-600: #fafafa;
@@ -47,6 +58,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--color-500);
 }
 
 img,
@@ -92,6 +104,10 @@ h6 {
 
 * {
   margin: 0;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {

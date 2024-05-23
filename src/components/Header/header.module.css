@@ -1,10 +1,13 @@
 .header {
-  padding: var(--spacing-4);
+  padding-top: var(--spacing-8);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: var(--layout-max-w);
+
+  @media (min-width: 768px) {
+    padding-top: var(--spacing-12);
+  }
 }
 
 .navlist {
@@ -23,6 +26,7 @@
   outline: none;
   border-radius: var(--radius-1-5);
   transition: background-color 100ms;
+  font-size: 1.8rem;
 
   &:active {
     background-color: var(--color-500);

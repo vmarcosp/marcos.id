@@ -27,7 +27,6 @@ module NavList = {
 @react.component
 let make = () => {
   <header className={classes["header"]}>
-    <span className={classes["logo"]}> {"**"->s} </span>
     <nav ariaLabel="Site menu">
       <NavList>
         <NavLink href="/"> {"About"->s} </NavLink>
