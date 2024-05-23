@@ -1,5 +1,5 @@
 .hero {
-  margin-top: var(--spacing-12);
+  margin-top: var(--spacing-18);
   width: 100%;
   max-width: var(--layout-max-w);
   padding: 0 var(--spacing-8);
@@ -17,6 +17,51 @@
 
 .text {
   font-size: 2.4rem;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: clamp(2rem, 4vw, 2.2rem);
   color: var(--color-300);
+  line-height: 28px;
+  letter-spacing: -0.1px;
+
+  > span {
+    color: var(--color-100);
+    font-weight: 500;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.links-container {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-12);
+}
+
+.link {
+  font-size: 20px;
+  color: var(--color-200);
+  position: relative;
+  text-decoration: underline dotted var(--color-200);
+  text-underline-offset: var(--spacing-1);
+  outline-offset: var(--spacing-1);
+  border-radius: var(--radius-1-5);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      color 200ms,
+      text-decoration-color 200ms;
+  }
+
+  &:focus-visible {
+    outline-color: var(--color-100);
+  }
+
+  &:hover {
+    color: var(--color-100);
+    text-decoration-color: var(--color-100);
+  }
 }
