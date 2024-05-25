@@ -33,6 +33,10 @@
   font-size: 1.8rem;
   font-family: var(--font-serif);
 
+  @media (min-width: 768px) {
+    padding: var(--spacing-2);
+  }
+
   &:focus-visible {
     outline-color: var(--color-100);
   }

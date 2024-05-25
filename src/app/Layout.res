@@ -20,7 +20,7 @@ let make = (~children) => {
       <Fonts.Script />
       <Header />
       <main> {children} </main>
-      <footer />
+      <Footer />
     </body>
   </html>
 }

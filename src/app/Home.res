@@ -28,8 +28,8 @@ let make = () => {
         {"A huge fan of vim and ReScript, I’ve been an active organizer and open-source maintainer, creating numerous ReScript libraries, courses and initiatives. I’ve also productified  my vim config and now sell it as a product (surprisingly, people actually buy it 🖤)."->s}
       </p>
     </div>
-    <a className={classes["link"]} href="mailto:marcosoliveira@duck.com">
+    <Link className={classes["email-link"]} href="mailto:marcosoliveira@duck.com">
       {"marcosoliveira[at]duck.com"->s}
-    </a>
+    </Link>
   </section>
 }

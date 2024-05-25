@@ -1,0 +1,23 @@
+.footer {
+  border-top: solid 1px var(--color-400);
+  width: 100%;
+  max-width: var(--layout-max-w);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-4);
+}
+
+.made-with {
+  font-size: 1.6rem;
+
+  > a {
+    color: var(--color-100);
+  }
+}
+
+.links-container {
+  display: flex;
+  gap: var(--spacing-4);
+}
