@@ -1,6 +1,15 @@
 .container {
   display: flex;
   align-items: center;
-  flex-flow: column wrap;
+  flex-direction: column;
   width: 100%;
+
+  > main {
+    flex-grow: 1;
+  }
+
+  > footer {
+    border: solid 1px black;
+    height: 40px;
+  }
 }

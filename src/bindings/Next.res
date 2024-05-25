@@ -4,6 +4,18 @@ module Font = {
   }
 }
 
+module Image = {
+  type props = {
+    src: string,
+    alt?: string,
+    width?: float,
+    height?: float,
+  }
+
+  @module("next/image")
+  external make: React.component<props> = "default"
+}
+
 module Link = {
   type props = {
     href: string,

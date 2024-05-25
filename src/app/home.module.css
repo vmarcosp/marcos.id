@@ -1,26 +1,32 @@
 .hero {
-  margin-top: var(--spacing-18);
+  margin-top: var(--spacing-14);
   width: 100%;
   max-width: var(--layout-max-w);
   padding: 0 var(--spacing-8);
 
   @media (min-width: 1024px) {
-    margin-top: var(--spacing-50);
+    margin-top: var(--spacing-18);
   }
 }
 
 .title {
   font-size: 3.2rem;
-  font-size: clamp(3.6rem, 4vw, 5.2rem);
   color: var(--color-100);
+  font-family: var(--font-serif);
 }
 
 .text {
-  font-size: 2.4rem;
-  font-size: clamp(2rem, 4vw, 2.2rem);
+  font-size: 1.6rem;
   color: var(--color-300);
   line-height: 28px;
   letter-spacing: -0.1px;
+  font-family: var(--font-sans);
+  margin-bottom: var(--spacing-2);
+
+  @media (min-width: 768px) {
+    margin-bottom: var(spacing--6);
+    font-size: 1.8rem;
+  }
 
   > span {
     color: var(--color-100);
@@ -34,21 +40,17 @@
   gap: var(--spacing-1);
 }
 
-.links-container {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: var(--spacing-4);
-  margin-top: var(--spacing-12);
-}
-
 .link {
-  font-size: 20px;
+  display: inline-block;
+  font-size: 1.8rem;
   color: var(--color-200);
   position: relative;
   text-decoration: underline dotted var(--color-200);
   text-underline-offset: var(--spacing-1);
   outline-offset: var(--spacing-1);
   border-radius: var(--radius-1-5);
+  font-family: var(--font-serif);
+  margin-top: var(--spacing-12);
 
   @media (prefers-reduced-motion: no-preference) {
     transition:

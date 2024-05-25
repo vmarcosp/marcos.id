@@ -1,24 +1,28 @@
 .header {
-  padding-top: var(--spacing-8);
-  display: flex;
-  justify-content: center;
+  padding: var(--spacing-8) var(--spacing-8) 0 var(--spacing-8);
+  justify-content: space-between;
   width: 100%;
   max-width: var(--layout-max-w);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
 
-  @media (min-width: 768px) {
+  @media (min-width: 470px) {
+    flex-direction: row;
+    gap: 0px;
     padding-top: var(--spacing-12);
   }
 }
 
 .navlist {
   display: flex;
-  gap: var(--spacing-3);
+  gap: var(--spacing-4);
   list-style: none;
+  padding: 0;
 }
 
 .navlink {
   --navlink-color: var(--color-200);
-  padding: 6px;
   font-weight: 400;
   color: var(--navlink-color);
   text-decoration: none;
@@ -27,6 +31,7 @@
   border-radius: var(--radius-1-5);
   transition: background-color 100ms;
   font-size: 1.8rem;
+  font-family: var(--font-serif);
 
   &:focus-visible {
     outline-color: var(--color-100);

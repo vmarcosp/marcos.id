@@ -12,6 +12,8 @@
     --spacing-7: 28px;
     --spacing-8: 28px;
     --spacing-12: 48px;
+    --spacing-13: 52px;
+    --spacing-14: 56px;
     --spacing-18: 72px;
     --spacing-50: 200px;
 
@@ -53,6 +55,11 @@
 
 * {
   margin: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {

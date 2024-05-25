@@ -18,11 +18,18 @@ let make = () => {
           "."->s,
         ]->React.array}
       </p>
+      <p className={classes["text"]}>
+        {"For the past 10 years, I’ve specialized in ui engineering, focusing on creating seamless user experiences and efficient developer tools."->s}
+      </p>
+      <p className={classes["text"]}>
+        {"Currently, I’m working at VTEX, where I play a pivotal role in building the new Checkout platform. I’m also heavily involved in improving VTEX’s extensibility ecosystem, ensuring a top-notch developer experience for digital commerce extensibility."->s}
+      </p>
+      <p className={classes["text"]}>
+        {"A huge fan of vim and ReScript, I’ve been an active organizer and open-source maintainer, creating numerous ReScript libraries, courses and initiatives. I’ve also productified  my vim config and now sell it as a product (surprisingly, people actually buy it 🖤)."->s}
+      </p>
     </div>
-    <div className={classes["links-container"]}>
-      <a className={classes["link"]} href="mailto:marcosoliveira@duck.com"> {"marcosoliveira[at]duck.com"->s} </a>
-      <a className={classes["link"]} href="https://x.com/vmaarcosp"> {"x"->s} </a>
-      <a className={classes["link"]} href="https://github.com/vmarcosp"> {"github"->s} </a>
-    </div>
+    <a className={classes["link"]} href="mailto:marcosoliveira@duck.com">
+      {"marcosoliveira[at]duck.com"->s}
+    </a>
   </section>
 }

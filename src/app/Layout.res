@@ -10,7 +10,14 @@ let metadata = {
 @react.component
 let make = (~children) => {
   <html lang="en">
-    <body className={clsx([Fonts.recoleta.className, "light", classes["container"]])}>
+    <body
+      className={clsx([
+        Fonts.dmSans.className,
+        Fonts.recoleta.className,
+        "light",
+        classes["container"],
+      ])}>
+      <Fonts.Script />
       <Header />
       <main> {children} </main>
       <footer />

@@ -1,4 +1,10 @@
 import localFont from 'next/font/local'
+import { DM_Sans } from 'next/font/google'
+
+export const dmSans = DM_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin']
+})
 
 export const recoleta = localFont({
   src: [
