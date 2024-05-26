@@ -32,3 +32,10 @@ module Navigation = {
   @module("next/navigation")
   external usePathname: unit => string = "usePathname"
 }
+
+module Metadata = {
+  type t = {
+    title?: string,
+    description?: string,
+  }
+}
