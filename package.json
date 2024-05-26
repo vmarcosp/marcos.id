@@ -6,7 +6,7 @@
     "rs:dev": "rescript build -w",
     "rs:build": "rescript build",
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm rs:build && next build",
     "start": "next start",
     "sync": "git add . && git commit -m '*' && git push origin main"
   },
