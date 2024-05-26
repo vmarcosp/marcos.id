@@ -2,6 +2,11 @@ _import("@/styles/global.css")
 
 let classes = css("./layout.module.css")
 
+let metadata: Next.Metadata.t = {
+  title: "Marcos Oliveira",
+  description: "Marcos Oliveira • UI Engineer"
+}
+
 @react.component
 let make = (~children) => {
   <html lang="en">

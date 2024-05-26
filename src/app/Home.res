@@ -1,10 +1,5 @@
 let classes = css("./home.module.css")
 
-let metadata: Next.Metadata.t = {
-  title: "Marcos Oliveira",
-  description: "Marcos Oliveira • UI Engineer"
-}
-
 @react.component
 let make = () => {
   <section className={classes["hero"]}>
