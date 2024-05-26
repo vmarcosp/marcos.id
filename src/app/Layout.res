@@ -4,7 +4,7 @@ let classes = css("./layout.module.css")
 
 let metadata: Next.Metadata.t = {
   title: "Marcos Oliveira",
-  description: "Marcos Oliveira • UI Engineer"
+  description: "UI engineer focused crafting outstanding products and tools."
 }
 
 @react.component
