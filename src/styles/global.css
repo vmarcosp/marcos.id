@@ -65,7 +65,7 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--color-500);
+  background: var(--color-500);
 }
 
 img,

@@ -24,13 +24,15 @@ let make = () => {
       <p className={classes["text"]}>
         {[
           "Currently, I’m working at "->s,
-          <Link target="_blank" className={classes["text-link"]} href="https://vtex.com"> {"VTEX"->s} </Link>,
+          <Link target="_blank" className={classes["text-link"]} href="https://vtex.com">
+            {"VTEX"->s}
+          </Link>,
           ", where I play a pivotal role in building the new Checkout platform. I’m also heavily involved in improving VTEX’s extensibility ecosystem, ensuring a top-notch developer experience for digital commerce extensibility."->s,
         ]->React.array}
       </p>
-      <p className={classes["text"]}>
-        {"A huge fan of vim and ReScript, I’ve been an active organizer and open-source maintainer, creating numerous ReScript libraries, courses and initiatives. I’ve also productified  my vim config and now sell it as a product (surprisingly, people actually buy it 🖤)."->s}
-      </p>
+        <p className={classes["text"]}>
+          {"A huge fan of vim and ReScript, I’ve been an active organizer and open-source maintainer, creating numerous ReScript libraries, courses and initiatives. I’ve also productified  my vim config and now sell it as a product (surprisingly, people actually buy it 🖤)."->s}
+        </p>
     </div>
     <Link className={classes["email-link"]} target="_blank" href="mailto:marcosoliveira@duck.com">
       {"marcosoliveira[at]duck.com"->s}
