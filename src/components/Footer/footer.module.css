@@ -37,7 +37,7 @@
     animation:
       footer-fadein 900ms forwards,
       footer-slidein 600ms forwards;
-    animation-delay: 1.2s;
+    animation-delay: 20ms;
   }
 }
 

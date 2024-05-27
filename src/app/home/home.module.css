@@ -42,7 +42,7 @@
     animation:
       title-fadein var(--animation-fadein-duration) forwards,
       title-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: var(--animation-slidein-duration);
+    animation-delay: 20ms;
   }
 }
 
@@ -60,7 +60,7 @@
     font-size: 1.8rem;
   }
 
-  >span {
+  > span {
     color: var(--color-100);
     font-weight: 500;
   }
@@ -91,7 +91,7 @@
     animation:
       text-fadein var(--animation-fadein-duration) forwards,
       text-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 800ms;
+    animation-delay: 20ms;
   }
 }
 
@@ -135,6 +135,6 @@
     animation:
       email-fadein var(--animation-fadein-duration) forwards,
       email-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 1s;
+    animation-delay: 20ms;
   }
 }
