@@ -1,4 +1,26 @@
 .header {
+  --header-translate-y: 10%;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slidein {
+    from {
+      transform: translateY(var(--header-translate-y));
+    }
+
+    to {
+      transform: translateY(0%);
+    }
+  }
+
   padding: var(--spacing-8) var(--spacing-8) 0 var(--spacing-8);
   justify-content: space-between;
   width: 100%;
@@ -6,6 +28,15 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-6);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--header-translate-y));
+    opacity: 0;
+    animation:
+      fadein 900ms forwards,
+      slidein 600ms forwards;
+    animation-delay: 800ms;
+  }
 
   @media (min-width: 470px) {
     flex-direction: row;

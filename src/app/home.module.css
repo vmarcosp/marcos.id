@@ -1,4 +1,26 @@
 .hero {
+  --hero-translate-y: 5%;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slidein {
+    from {
+      transform: translateY(var(--hero-translate-y));
+    }
+
+    to {
+      transform: translateY(0%);
+    }
+  }
+
   margin-top: var(--spacing-14);
   width: 100%;
   max-width: var(--layout-max-w);
@@ -7,6 +29,15 @@
 
   @media (min-width: 1024px) {
     margin-top: var(--spacing-18);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--hero-translate-y));
+    opacity: 0;
+    animation:
+      fadein 900ms forwards,
+      slidein 600ms forwards;
+    animation-delay: 1s;
   }
 }
 
