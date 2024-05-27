@@ -1,6 +1,20 @@
 .header {
   --header-translate-y: 10%;
 
+  padding: var(--spacing-8) var(--spacing-8) 0 var(--spacing-8);
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--layout-max-w);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+
+  @media (min-width: 470px) {
+    flex-direction: row;
+    gap: 0px;
+    padding-top: var(--spacing-12);
+  }
+
   @keyframes fadein {
     from {
       opacity: 0;
@@ -21,27 +35,13 @@
     }
   }
 
-  padding: var(--spacing-8) var(--spacing-8) 0 var(--spacing-8);
-  justify-content: space-between;
-  width: 100%;
-  max-width: var(--layout-max-w);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-6);
-
   @media (prefers-reduced-motion: no-preference) {
     transform: translateY(var(--header-translate-y));
     opacity: 0;
     animation:
-      fadein 900ms forwards,
-      slidein 600ms forwards;
-    animation-delay: 800ms;
-  }
-
-  @media (min-width: 470px) {
-    flex-direction: row;
-    gap: 0px;
-    padding-top: var(--spacing-12);
+      fadein var(--animation-fadein-duration) forwards,
+      slidein var(--animation-slidein-duration) forwards;
+    animation-delay: 400ms;
   }
 }
 

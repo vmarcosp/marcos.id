@@ -1,5 +1,13 @@
 @layer tokens, components;
 
+@layer animations {
+  :root {
+    --animation-fadein-duration: 900ms;
+    --animation-slidein-duration: 600ms;
+    --animation-slidein-delay: 400ms;
+  }
+}
+
 @layer tokens {
   :root {
     /* Spacing */

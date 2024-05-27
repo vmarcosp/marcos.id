@@ -1,6 +1,4 @@
 .hero {
-  --hero-translate-y: 5%;
-
   margin-top: var(--spacing-14);
   width: 100%;
   max-width: var(--layout-max-w);
@@ -13,12 +11,43 @@
 }
 
 .title {
+  --title-translate-y: 20%;
   font-size: 3.2rem;
   color: var(--color-100);
   font-family: var(--font-serif);
+
+  @keyframes title-fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes title-slidein {
+    from {
+      transform: translateY(var(--title-translate-y));
+    }
+
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--title-translate-y));
+    opacity: 0;
+    animation:
+      title-fadein var(--animation-fadein-duration) forwards,
+      title-slidein var(--animation-slidein-duration) forwards;
+    animation-delay: var(--animation-slidein-duration);
+  }
 }
 
 .text {
+  --text-translate-y: 20%;
   font-size: 1.6rem;
   color: var(--color-300);
   line-height: 28px;
@@ -31,9 +60,38 @@
     font-size: 1.8rem;
   }
 
-  > span {
+  >span {
     color: var(--color-100);
     font-weight: 500;
+  }
+
+  @keyframes text-fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes text-slidein {
+    from {
+      transform: translateY(var(--text-translate-y));
+    }
+
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--text-translate-y));
+    opacity: 0;
+    animation:
+      text-fadein var(--animation-fadein-duration) forwards,
+      text-slidein var(--animation-slidein-duration) forwards;
+    animation-delay: 800ms;
   }
 }
 
@@ -48,5 +106,35 @@
 }
 
 .email-link {
+  --email-link-translate-y: 20%;
   margin-top: var(--spacing-12);
+
+  @keyframes email-fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes email-slidein {
+    from {
+      transform: translateY(var(--email-link-translate-y));
+    }
+
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--email-link-translate-y));
+    opacity: 0;
+    animation:
+      email-fadein var(--animation-fadein-duration) forwards,
+      email-slidein var(--animation-slidein-duration) forwards;
+    animation-delay: 1s;
+  }
 }
