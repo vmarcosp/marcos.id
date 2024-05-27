@@ -1,1 +1,1 @@
-export { make as default } from './Home.res.js'
+export { make as default } from './home/Home.res.js'
