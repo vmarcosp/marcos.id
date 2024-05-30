@@ -41,7 +41,7 @@
     animation:
       fadein var(--animation-fadein-duration) forwards,
       slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 20ms;
+    animation-delay: 10ms;
   }
 
   .navlist {

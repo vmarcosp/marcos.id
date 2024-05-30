@@ -28,7 +28,7 @@ module NavList = {
 @react.component
 let make = () => {
   <header className={classes["header"]}>
-    <Next.Image src={logo} width={32.0} alt="Marcos Oliveira's Logo" />
+    <Next.Image priority={true} src={logo} width={32.0} alt="Marcos Oliveira's Logo" />
     <nav ariaLabel="Site menu">
       <NavList>
         <NavLink href="/"> {"About"->s} </NavLink>

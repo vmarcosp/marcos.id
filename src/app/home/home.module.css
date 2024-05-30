@@ -42,7 +42,7 @@
     animation:
       title-fadein var(--animation-fadein-duration) forwards,
       title-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 20ms;
+    animation-delay: 10ms;
   }
 }
 
@@ -91,7 +91,7 @@
     animation:
       text-fadein var(--animation-fadein-duration) forwards,
       text-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 20ms;
+    animation-delay: 10ms;
   }
 }
 
@@ -135,6 +135,6 @@
     animation:
       email-fadein var(--animation-fadein-duration) forwards,
       email-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 20ms;
+    animation-delay: 10ms;
   }
 }

@@ -10,6 +10,7 @@ module Image = {
     alt?: string,
     width?: float,
     height?: float,
+    priority?: bool
   }
 
   @module("next/image")
