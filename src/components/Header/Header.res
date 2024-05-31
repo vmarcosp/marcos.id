@@ -7,7 +7,7 @@ let logo = _image("./logo.webp")
 
 module NavLink = {
   @react.component
-  let make = (~children, ~href) => {
+  let make = (~children, ~target=?,  ~href) => {
     let pathname = Next.Navigation.usePathname()
     let isActive = pathname === href
     let className = switch isActive {
@@ -15,7 +15,7 @@ module NavLink = {
     | false => classes["navlink"]
     }
     <li>
-      <Next.Link href className> {children} </Next.Link>
+      <Next.Link href ?target className> {children} </Next.Link>
     </li>
   }
 }
@@ -32,8 +32,7 @@ let make = () => {
     <nav ariaLabel="Site menu">
       <NavList>
         <NavLink href="/"> {"About"->s} </NavLink>
-        <NavLink href="/snippets"> {"Snippets"->s} </NavLink>
-        <NavLink href="/speaking"> {"Speaking"->s} </NavLink>
+        <NavLink target="_blank" href="https://github.com/vmarcosp"> {"Projects"->s} </NavLink>
       </NavList>
     </nav>
   </header>
