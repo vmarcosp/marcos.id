@@ -49,3 +49,9 @@ module GoogleTagManager = {
   @module("@next/third-parties/google")
   external make: React.component<props> = "GoogleTagManager"
 }
+
+module SpeedInsights = {
+  type props = {}
+  @module("@vercel/speed-insights/next")
+  external make: React.component<props> = "SpeedInsights"
+}
