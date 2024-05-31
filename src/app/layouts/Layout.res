@@ -10,6 +10,7 @@ let metadata: Next.Metadata.t = {
 @react.component
 let make = (~children) => {
   <html lang="en">
+  <Next.GoogleTagManager gtmId="G-FWTDXN4ET4" />
     <body
       className={clsx([
         "light",

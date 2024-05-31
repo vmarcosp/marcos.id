@@ -40,3 +40,12 @@ module Metadata = {
     description?: string,
   }
 }
+
+module GoogleTagManager = {
+  type props = {
+    gtmId: string
+  }
+
+  @module("@next/third-parties/google")
+  external make: React.component<props> = "GoogleTagManager"
+}
