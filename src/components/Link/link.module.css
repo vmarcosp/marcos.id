@@ -1,6 +1,6 @@
 .link {
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--color-200);
   position: relative;
   text-decoration: underline dotted var(--color-200);
@@ -22,5 +22,9 @@
   &:hover {
     color: var(--color-100);
     text-decoration-color: var(--color-100);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
   }
 }

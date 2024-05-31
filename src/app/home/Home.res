@@ -24,7 +24,7 @@ let make = () => {
       <p className={classes["text"]}>
         {[
           "Currently, I’m working at "->s,
-          <Link target="_blank" className={classes["text-link"]} href="https://vtex.com">
+          <Link target="_blank" href="https://vtex.com">
             {"VTEX"->s}
           </Link>,
           ", where I play a pivotal role in building the new Checkout platform. I’m also heavily involved in improving VTEX’s extensibility ecosystem, ensuring a top-notch developer experience for digital commerce extensibility."->s,

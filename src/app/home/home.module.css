@@ -60,6 +60,10 @@
     font-size: 1.8rem;
   }
 
+  > a {
+    font-family: var(--font-sans);
+  }
+
   > span {
     color: var(--color-100);
     font-weight: 500;
@@ -93,10 +97,6 @@
       text-slidein var(--animation-slidein-duration) forwards;
     animation-delay: 10ms;
   }
-}
-
-.text-link {
-  font-family: var(--font-sans);
 }
 
 .text-container {
