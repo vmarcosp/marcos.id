@@ -1,7 +1,5 @@
 module Font = {
-  type t = {
-    className: string
-  }
+  type t = {className: string}
 }
 
 module Image = {
@@ -10,7 +8,7 @@ module Image = {
     alt?: string,
     width?: float,
     height?: float,
-    priority?: bool
+    priority?: bool,
   }
 
   @module("next/image")
@@ -35,16 +33,27 @@ module Navigation = {
 }
 
 module Metadata = {
+  type openGraphImages = {
+    url: string,
+    width: int,
+    height: int,
+  }
+  type openGraph = {
+    title?: string,
+    description?: string,
+    url?: string,
+    siteName?: string,
+    images: array<openGraphImages>,
+  }
   type t = {
     title?: string,
     description?: string,
+    openGraph?: openGraph,
   }
 }
 
 module GoogleTagManager = {
-  type props = {
-    gtmId: string
-  }
+  type props = {gtmId: string}
 
   @module("@next/third-parties/google")
   external make: React.component<props> = "GoogleTagManager"

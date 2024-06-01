@@ -5,6 +5,19 @@ let classes = css("./layout.module.css")
 let metadata: Next.Metadata.t = {
   title: "Marcos Oliveira",
   description: "UI engineer focused on crafting outstanding products and tools.",
+  openGraph: {
+    title: "Marcos Oliveira",
+    description: "UI Engineer focused on crafting outstanding products and tools.",
+    url: "https://marcos.id",
+    siteName: "Marcos Oliveira",
+    images: [
+      {
+        url: "https://marcos.id/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      }
+    ]
+  }
 }
 
 @react.component
