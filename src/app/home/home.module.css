@@ -54,6 +54,12 @@
   letter-spacing: -0.1px;
   font-family: var(--font-sans);
   margin-top: var(--spacing-2);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  hyphens: auto;
 
   @media (min-width: 768px) {
     margin-bottom: var(spacing--6);

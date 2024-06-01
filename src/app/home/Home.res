@@ -8,9 +8,9 @@ let make = () => {
       <p className={classes["text"]}>
         {[
           "UI engineer from Brazil, crafting outstanding products and tools using"->s,
-          <span> {" JavaScript "->s} </span>,
+          <span> {" JavaScript"->s} </span>,
           ", "->s,
-          <span> {" ReScript "->s} </span>,
+          <span> {" ReScript"->s} </span>,
           ", "->s,
           <span> {"React"->s} </span>,
           " and "->s,
