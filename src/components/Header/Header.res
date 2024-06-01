@@ -32,7 +32,7 @@ let make = () => {
     <nav ariaLabel="Site menu">
       <NavList>
         <NavLink href="/"> {"About"->s} </NavLink>
-        <NavLink target="_blank" href="https://github.com/vmarcosp"> {"Projects"->s} </NavLink>
+        <NavLink  href="/projects"> {"Projects"->s} </NavLink>
       </NavList>
     </nav>
   </header>

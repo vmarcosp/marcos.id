@@ -1,0 +1,126 @@
+.container {
+  --container-translate-y: 2%;
+  margin-top: var(--spacing-14);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+
+  @keyframes container-fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes container-slidein {
+    from {
+      transform: translateY(var(--container-translate-y));
+    }
+
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--container-translate-y));
+    opacity: 0;
+    animation:
+      container-fadein var(--animation-fadein-duration) forwards,
+      container-slidein var(--animation-slidein-duration) forwards;
+    animation-delay: 10ms;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: var(--spacing-18);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--spacing-8);
+  }
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    gap: var(--spacing-4);
+    grid-column-start: 4;
+    grid-column-end: 9;
+  }
+}
+
+.description-container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-family: var(--font-serif);
+  color: var(--color-100);
+}
+
+.text {
+  font-size: 1.6rem;
+  font-family: var(--font-sans);
+  color: var(--color-200);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.project-link {
+  text-decoration: none;
+
+  &:not(:last-child) > .project-card {
+    border-bottom: solid 1px var(--color-400);
+  }
+}
+
+.project-card {
+  border-radius: var(--radius-1);
+  padding: var(--spacing-3) 0;
+
+  @media (min-width: 768px) {
+    padding: var(--spacing-3);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform 200ms;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX(6px);
+      }
+    }
+  }
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > h2 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--color-100);
+    font-weight: 600;
+  }
+
+  > span {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-200);
+  }
+}
+
+.project-description {
+  font-family: var(--font-sans);
+  font-size: 1.6rem;
+  color: var(--color-200);
+}

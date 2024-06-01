@@ -1,8 +1,5 @@
 .hero {
   margin-top: var(--spacing-14);
-  width: 100%;
-  max-width: var(--layout-max-w);
-  padding: 0 var(--spacing-8);
   margin-bottom: var(--spacing-12);
 
   @media (min-width: 1024px) {
