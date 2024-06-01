@@ -23,7 +23,7 @@ let metadata: Next.Metadata.t = {
 @react.component
 let make = (~children) => {
   <html lang="en">
-    <Next.GoogleTagManager gtmId="GTM-P3FDXCZD" />
+    <Next.GoogleTagManager gtmId="G-0E6NJ8P0DW" />
     <body className={clsx(["light", classes["container"]])}>
       <Fonts.Script />
       <Next.SpeedInsights />
