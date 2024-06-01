@@ -40,13 +40,13 @@ let make = () => {
       />
       <Project
         name={"ES2077"->s}
-        role={"Creator"->s}
+        role={"co-Creator"->s}
         description={"The world's first ReScript course as an educational tool."->s}
         href="https://es77.dev"
       />
       <Project
         name={"Ancestor"->s}
-        role={"co-Creator"->s}
+        role={"Creator"->s}
         description={"Primitive UI library and utility-first toolkit for ReScript."->s}
         href="https://github.com/rescriptbr/ancestor"
       />
