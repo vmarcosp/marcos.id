@@ -12,7 +12,7 @@ let metadata: Next.Metadata.t = {
     siteName: "Marcos Oliveira",
     images: [
       {
-        url: "https://marcos.id/opengraph-image.jpg",
+        url: "https://marcos.id/og.jpg",
         width: 1200,
         height: 630,
       }
