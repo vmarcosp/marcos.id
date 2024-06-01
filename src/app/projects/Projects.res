@@ -34,7 +34,7 @@ let make = () => {
       />
       <Project
         name={"BetterVim"->s}
-        role={"Creator"->s}
+        role={"co-Creator"->s}
         description={"Neovim distribution as a service."->s}
         href="https://bettervim.com"
       />
@@ -60,7 +60,7 @@ let make = () => {
         name={"ReSchema"->s}
         role={"Maintainer"->s}
         description={"Schema validation library for ReScript."->s}
-        href="https://github.com/rescriptbr/reschemm"
+        href="https://github.com/rescriptbr/reschema"
       />
     </div>
   </section>
