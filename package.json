@@ -11,7 +11,6 @@
     "sync": "git add . && git commit -m '*' && git push origin main"
   },
   "dependencies": {
-    "@ariakit/react": "0.4.6",
     "@next/third-parties": "14.2.3",
     "@rescript/core": "1.3.0",
     "@rescript/react": "0.12.1",

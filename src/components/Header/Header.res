@@ -1,7 +1,5 @@
 @@directive("'use client'")
 
-module Menubar = Ariakit.Menubar
-
 let classes = css("./header.module.css")
 let logo = _image("./logo.webp")
 
