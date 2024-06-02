@@ -1,6 +1,6 @@
 .link {
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: var(--body-xs);
   color: var(--color-200);
   position: relative;
   text-decoration: underline dotted var(--color-200);
@@ -26,6 +26,6 @@
   }
 
   @media (min-width: 768px) {
-    font-size: 1.8rem;
+    font-size: var(--body);
   }
 }

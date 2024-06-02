@@ -3,18 +3,19 @@ let classes = css("./projects.module.css")
 module Project = {
   @react.component
   let make = (~name, ~role, ~description, ~href) => {
-    <a href target="_blank" className={classes["project-link"]}>
-      <article className={classes["project-card"]}>
-        <div className={classes["project-header"]}>
-          <h2> {name} </h2>
-          <span> {role} </span>
-        </div>
-        <p className={classes["project-description"]}> {description} </p>
-      </article>
-    </a>
+    <CardList.Item>
+      <a href target="_blank" className={classes["project-link"]}>
+        <article className={classes["project-card"]}>
+          <div className={classes["project-header"]}>
+            <h2> {name} </h2>
+            <span> {role} </span>
+          </div>
+          <p className={classes["project-description"]}> {description} </p>
+        </article>
+      </a>
+    </CardList.Item>
   }
 }
-
 
 @react.component
 let make = () => {
@@ -25,7 +26,7 @@ let make = () => {
         {"Projects, experiments, and open-source contributions I've had the privilege to create or maintain."->s}
       </p>
     </div>
-    <div className={classes["list-container"]}>
+    <CardList>
       <Project
         name={"FastCheckout"->s}
         role={"Engineer"->s}
@@ -62,7 +63,6 @@ let make = () => {
         description={"Schema validation library for ReScript."->s}
         href="https://github.com/rescriptbr/reschema"
       />
-    </div>
+    </CardList>
   </section>
 }
-

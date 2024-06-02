@@ -9,7 +9,7 @@
 
 .title {
   --title-translate-y: 20%;
-  font-size: 3.2rem;
+  font-size: var(--title-lg);
   color: var(--color-100);
   font-family: var(--font-serif);
 
@@ -39,13 +39,13 @@
     animation:
       title-fadein var(--animation-fadein-duration) forwards,
       title-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 10ms;
+    animation-delay: var(--animation-delay);
   }
 }
 
 .text {
   --text-translate-y: 20%;
-  font-size: 1.6rem;
+  font-size: var(--body-xs);
   color: var(--color-300);
   line-height: 28px;
   letter-spacing: -0.1px;
@@ -60,7 +60,7 @@
 
   @media (min-width: 768px) {
     margin-bottom: var(spacing--6);
-    font-size: 1.8rem;
+    font-size: var(--body);
   }
 
   > a {
@@ -98,7 +98,7 @@
     animation:
       text-fadein var(--animation-fadein-duration) forwards,
       text-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 10ms;
+    animation-delay: var(--animation-delay);
   }
 }
 
@@ -138,6 +138,6 @@
     animation:
       email-fadein var(--animation-fadein-duration) forwards,
       email-slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 10ms;
+    animation-delay: var(--animation-delay);
   }
 }

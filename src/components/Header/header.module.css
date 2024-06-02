@@ -41,7 +41,7 @@
     animation:
       fadein var(--animation-fadein-duration) forwards,
       slidein var(--animation-slidein-duration) forwards;
-    animation-delay: 10ms;
+    animation-delay: var(--animation-delay);
   }
 
   .navlist {
@@ -60,7 +60,7 @@
     outline-offset: -1px;
     border-radius: var(--radius-1-5);
     transition: background-color 100ms;
-    font-size: 1.8rem;
+    font-size: var(--body);
     font-family: var(--font-serif);
 
     @media (min-width: 768px) {

@@ -24,12 +24,12 @@
   @media (prefers-reduced-motion: no-preference) {
     opacity: 0;
     animation: footer-fadein 900ms forwards;
-    animation-delay: 10ms;
+    animation-delay: var(--animation-delay);
   }
 }
 
 .made-with {
-  font-size: 1.6rem;
+  font-size: var(--body-xs);
   font-family: var(--font-serif);
   color: var(--color-200);
 }

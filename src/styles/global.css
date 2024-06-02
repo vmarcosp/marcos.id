@@ -4,7 +4,7 @@
   :root {
     --animation-fadein-duration: 900ms;
     --animation-slidein-duration: 600ms;
-    --animation-slidein-delay: 400ms;
+    --animation-delay: 10ms;
   }
 }
 
@@ -38,6 +38,14 @@
     --screen-lg: 1024px;
     --screen-xl: 1280px;
     --screen-2xl: 1536px;
+
+    /* Typography */
+    --title-lg: 3.2rem;
+    --title-md: 2.8rem;
+    --title-sm: 2.4rem;
+    --title-xs: 2rem;
+    --body: 1.8rem;
+    --body-xs: 1.6rem;
   }
 
   .light {

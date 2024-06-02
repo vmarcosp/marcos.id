@@ -1,0 +1,36 @@
+.card-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    gap: var(--spacing-4);
+    grid-column-start: 4;
+    grid-column-end: 9;
+  }
+}
+
+.item {
+  padding: var(--spacing-3) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+
+  @media (min-width: 768px) {
+    padding: var(--spacing-3);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform 200ms;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX(6px);
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: solid 1px var(--color-400);
+  }
+}
