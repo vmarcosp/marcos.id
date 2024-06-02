@@ -4,6 +4,10 @@
     font-family: var(--font-serif);
     line-height: 3.2rem;
     margin-top: var(--spacing-12);
+
+    @media (min-width: 768px) {
+      margin-top: var(--spacing-18);
+    }
   }
 
   >h2 {
@@ -12,11 +16,15 @@
     font-weight: 600;
     line-height: 2.4rem;
     margin-top: var(--spacing-8);
+
+    @media (min-width: 768px) {
+      margin-top: var(--spacing-9);
+    }
   }
 
   >h3 {
     font-size: var(--title-xs);
-    font-weight: 600;
+    font-weight: 500;
     font-family: var(--font-serif);
     margin-top: var(--spacing-4);
   }
@@ -26,26 +34,59 @@
     color: var(--color-200);
     font-size: var(--body-xs);
     margin-top: var(--spacing-2);
+
+    @media (min-width: 768px) {
+      font-size: var(--body-xs);
+    }
   }
 
   >h1,
-  >h2,
   >h3,
+  >h2,
   >h4,
   >h5 {
     color: var(--color-100);
   }
 
   >pre {
-    color: var(--color-200);
+    color: var(--color-100);
     background-color: #eeeeee;
     padding: var(--spacing-4);
     border-radius: var(--radius-1-5);
     font-size: 1.5rem;
     margin-top: var(--spacing-2);
 
-    &>code {
+    >code {
       text-wrap: wrap;
     }
+  }
+
+  p>code,
+  li>code {
+    background-color: var(--color-400);
+    border-radius: var(--radius-1);
+    padding: 4px 4px;
+    font-weight: 500;
+    color: var(--color-100);
+    font-size: 1.4rem;
+  }
+
+  >ul {
+    margin-top: var(--spacing-4);
+    padding-left: 16px;
+
+    >li {
+      font-size: var(--body-xs);
+      font-family: var(--font-sans);
+      margin-top: var(--spacing-1);
+    }
+  }
+
+  >* a {
+    color: var(--color-100);
+    text-decoration: underline dotted var(--color-200);
+    -webkit-text-decoration: underline dotted var(--color-200);
+    text-underline-offset: var(--spacing-1);
+    outline-offset: var(--spacing-1);
   }
 }

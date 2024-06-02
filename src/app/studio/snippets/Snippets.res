@@ -29,7 +29,7 @@ let make = () => {
         name={"PNG to WEBP"->s}
         description={"Shell script to convert all .png files in the directory to .webp"->s}
         category="Shell"
-        href="/test"
+        href="/studio/snippets/png-to-webp"
       />
       <Snippet
         name={"<VisuallyHidden />"->s}
