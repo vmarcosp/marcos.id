@@ -1,0 +1,51 @@
+.markdown-container {
+  >h1 {
+    font-size: var(--title-md);
+    font-family: var(--font-serif);
+    line-height: 3.2rem;
+    margin-top: var(--spacing-12);
+  }
+
+  >h2 {
+    font-size: var(--title-sm);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin-top: var(--spacing-8);
+  }
+
+  >h3 {
+    font-size: var(--title-xs);
+    font-weight: 600;
+    font-family: var(--font-serif);
+    margin-top: var(--spacing-4);
+  }
+
+  >p {
+    font-family: var(--font-sans);
+    color: var(--color-200);
+    font-size: var(--body-xs);
+    margin-top: var(--spacing-2);
+  }
+
+  >h1,
+  >h2,
+  >h3,
+  >h4,
+  >h5 {
+    color: var(--color-100);
+  }
+
+  >pre {
+    color: var(--color-200);
+    background-color: #eeeeee;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-1-5);
+    font-size: 1.5rem;
+    margin-top: var(--spacing-2);
+
+    &>code {
+      text-wrap: wrap;
+    }
+  }
+}

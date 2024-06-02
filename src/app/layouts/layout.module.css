@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 100%;
 
-  > main {
+  >main {
     flex-grow: 1;
     width: 100%;
     max-width: var(--layout-max-w);

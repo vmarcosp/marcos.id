@@ -1,0 +1,43 @@
+<div className="markdown-container">
+# Converting PNG to WebP with a Shell Script
+
+## Introduction
+
+In the world of web development, optimizing images for faster load times and better performance is crucial. One way to achieve this is by converting PNG images to the more efficient WebP format. Below is a simple shell script that automates this conversion process.
+
+## The Script
+
+```
+function png2webp () {  
+  for file in *; do  
+      cwebp -q 100 "$file" -o "${file%.png}.webp"  
+  done  
+}
+```
+
+## How It Works
+
+### Loop Through Files
+
+The script uses a `for` loop to iterate through all files in the current directory.
+
+### Convert PNG to WebP
+
+For each file, it uses the `cwebp` command to convert PNG files to WebP. The `-q 100` option sets the quality to 100, ensuring maximum quality. The `${file%.png}.webp` syntax changes the file extension from `.png` to `.webp`.
+
+## Usage
+
+1. **Ensure you have `cwebp` installed:** You can install it using [WebP Utilities](https://developers.google.com/speed/webp/download).
+2. **Save the script:** Save the above script in a file, e.g., `convert.sh`.
+3. **Make it executable:** Run `chmod +x convert.sh` in your terminal.
+4. **Execute the script:** Navigate to the directory with your PNG files and run `./convert.sh`.
+
+## Conclusion
+
+This simple shell script is a powerful tool for optimizing your web images by converting them from PNG to WebP format, enhancing your website's performance and speed.
+
+For more information on WebP and its benefits, visit [Google's WebP page](https://developers.google.com/speed/webp).
+
+
+</div>
+

@@ -1,4 +1,5 @@
 _import("@/styles/global.css")
+_import("@/styles/markdown.css")
 
 let classes = css("./layout.module.css")
 
@@ -15,15 +16,19 @@ let metadata: Next.Metadata.t = {
         url: "https://marcos.id/og.jpg",
         width: 1200,
         height: 630,
-      }
-    ]
-  }
+      },
+    ],
+  },
 }
 
 @react.component
 let make = (~children) => {
   <html lang="en">
-    <Next.GoogleAnalytics gaId="G-0E6NJ8P0DW" />
+    {if (Env.nodeEnv === #development) {
+      <Next.GoogleAnalytics gaId="G-0E6NJ8P0DW" />
+    } else {
+      React.null
+    }}
     <body className={clsx(["light", classes["container"]])}>
       <Fonts.Script />
       <Next.SpeedInsights />
