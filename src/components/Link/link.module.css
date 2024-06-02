@@ -4,6 +4,7 @@
   color: var(--color-200);
   position: relative;
   text-decoration: underline dotted var(--color-200);
+  -webkit-text-decoration: underline dotted var(--color-200);
   text-underline-offset: var(--spacing-1);
   outline-offset: var(--spacing-1);
   border-radius: var(--radius-1-5);
