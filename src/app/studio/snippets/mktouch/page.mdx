@@ -1,0 +1,23 @@
+
+<div className="markdown-container">
+# mktouch
+As a Neovim user, I'm used to creating folders directly from my terminal instead of using
+the editor or a GUI. Frequently, I need to touch a new file, like a component, but I don't have
+the parent folders to place this new file in. So, my friend [@fdaciuk](https://twitter.com/fdaciuk) showed me this awesome shell script that 
+  magically not just creates the file, but also the needed parent folders if they don't exist:
+
+```sh
+function mktouch () {
+  for p in $@; do
+    mkdir -p $(dirname "$p")
+  done
+
+  touch $@
+}
+```
+## Usage
+  Just like `mkdir` but with super powers:
+```
+mktouch src/path/to/component/Component.js
+```
+</div>

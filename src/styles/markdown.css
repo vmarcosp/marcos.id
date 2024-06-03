@@ -34,6 +34,9 @@
     color: var(--color-200);
     font-size: var(--body-xs);
     margin-top: var(--spacing-2);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 
     @media (min-width: 768px) {
       font-size: var(--body-xs);
@@ -54,7 +57,7 @@
     padding: var(--spacing-4);
     border-radius: var(--radius-1-5);
     font-size: 1.5rem;
-    margin-top: var(--spacing-2);
+    margin-top: var(--spacing-4);
 
     >code {
       text-wrap: wrap;

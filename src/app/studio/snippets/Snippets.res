@@ -26,16 +26,16 @@ let make = () => {
     </div>
     <CardList>
       <Snippet
-        name={"PNG to WEBP"->s}
+        name={"png2webp"->s}
         description={"Shell script to convert all .png files in the directory to .webp"->s}
         category="Shell"
         href="/studio/snippets/png-to-webp"
       />
       <Snippet
-        name={"<VisuallyHidden />"->s}
-        description={"React component to visually hide any content."->s}
-        category="React"
-        href="/test"
+        name={"mktouch"->s}
+        description={"Touch a file and magically create the needed parent folders."->s}
+        category="Shell"
+        href="/studio/snippets/mktouch"
       />
     </CardList>
   </section>
