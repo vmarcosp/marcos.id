@@ -4,7 +4,7 @@ module Snippet = {
   @react.component
   let make = (~name, ~description, ~category, ~href) => {
     <CardList.Item>
-      <a href target="_blank" className={classes["snippet-link"]}>
+      <a href  className={classes["snippet-link"]}>
         <div className={classes["snippet-header"]}>
           <h2> {name} </h2>
           <span>{category->s}</span>

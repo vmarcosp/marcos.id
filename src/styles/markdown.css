@@ -1,4 +1,35 @@
 .markdown-container {
+  --container-translate-y: 5%;
+
+  @keyframes container-fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes container-slidein {
+    from {
+      transform: translateY(var(--container-translate-y));
+    }
+
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--container-translate-y));
+    opacity: 0;
+    animation:
+      container-fadein var(--animation-fadein-duration) forwards,
+      container-slidein var(--animation-slidein-duration) forwards;
+    animation-delay: var(--animation-delay);
+  }
+
   >h1 {
     font-size: var(--title-md);
     font-family: var(--font-serif);
