@@ -1,5 +1,73 @@
 let classes = css("./projects.module.css")
 
+type project = {
+  name: string,
+  role: string,
+  description: string,
+  href: string,
+}
+
+let projects = [
+  {
+    name: "FastCheckout",
+    role: "Engineer",
+    description: "VTEX's new Checkout platform as a service.",
+    href: "https://www.youtube.com/watch?v=TDJG1aIUWec",
+  },
+  {
+    name: "BetterVim",
+    role: "co-Creator",
+    description: "Neovim distribution as a service.",
+    href: "https://bettervim.com",
+  },
+  {
+    name: "ES2077",
+    role: "co-Creator",
+    description: "The world's first ReScript course as an educational tool.",
+    href: "https://es77.dev",
+  },
+  {
+    name: "Ancestor",
+    role: "Creator",
+    description: "Primitive UI library and utility-first toolkit for ReScript.",
+    href: "https://github.com/rescriptbr/ancestor",
+  },
+  {
+    name: "ReForm",
+    role: "Maintainer",
+    description: "ReScript and React library for enhancing forms.",
+    href: "https://github.com/rescriptbr/reform",
+  },
+  {
+    name: "ReSchema",
+    role: "Maintainer",
+    description: "Schema validation library for ReScript.",
+    href: "https://github.com/rescriptbr/reschema",
+  },
+]
+
+let jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Projects by Marcos Oliveira",
+  "itemListElement": projects->Array.mapWithIndex((project, index) =>
+    {
+      "@type": "ItemList",
+      "position": index,
+      "item": {
+        "@type": "CreativeWork",
+        "name": project.name,
+        "author": {
+          "@type": "Person",
+          "name": "Marcos Oliveira",
+        },
+        "description": project.description,
+        "url": project.href,
+      },
+    }
+  ),
+}
+
 module Project = {
   @react.component
   let make = (~name, ~role, ~description, ~href) => {
@@ -27,42 +95,11 @@ let make = () => {
       </p>
     </div>
     <CardList>
-      <Project
-        name={"FastCheckout"->s}
-        role={"Engineer"->s}
-        description={"VTEX's new Checkout platform as a service."->s}
-        href="https://www.youtube.com/watch?v=TDJG1aIUWec"
-      />
-      <Project
-        name={"BetterVim"->s}
-        role={"co-Creator"->s}
-        description={"Neovim distribution as a service."->s}
-        href="https://bettervim.com"
-      />
-      <Project
-        name={"ES2077"->s}
-        role={"co-Creator"->s}
-        description={"The world's first ReScript course as an educational tool."->s}
-        href="https://es77.dev"
-      />
-      <Project
-        name={"Ancestor"->s}
-        role={"Creator"->s}
-        description={"Primitive UI library and utility-first toolkit for ReScript."->s}
-        href="https://github.com/rescriptbr/ancestor"
-      />
-      <Project
-        name={"ReForm"->s}
-        role={"Maintainer"->s}
-        description={"ReScript and React library for enhancing forms."->s}
-        href="https://github.com/rescriptbr/reform"
-      />
-      <Project
-        name={"ReSchema"->s}
-        role={"Maintainer"->s}
-        description={"Schema validation library for ReScript."->s}
-        href="https://github.com/rescriptbr/reschema"
-      />
+      {projects
+      ->Array.map(({name, role, description, href}) =>
+        <Project name={name->s} role={role->s} description={description->s} href={href} />
+      )
+      ->React.array}
     </CardList>
   </section>
 }
