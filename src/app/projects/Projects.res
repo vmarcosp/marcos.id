@@ -52,8 +52,8 @@ let jsonLd = {
   "name": "Projects by Marcos Oliveira",
   "itemListElement": projects->Array.mapWithIndex((project, index) =>
     {
-      "@type": "ItemList",
-      "position": index,
+      "@type": "ListItem",
+      "position": index + 1,
       "item": {
         "@type": "CreativeWork",
         "name": project.name,
