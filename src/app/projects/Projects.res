@@ -88,6 +88,7 @@ module Project = {
 @react.component
 let make = () => {
   <section className={classes["container"]}>
+    <JsonLd json={jsonLd} />
     <div className={classes["description-container"]}>
       <h1 className={classes["title"]}> {"Build. Ship."->s} </h1>
       <p className={classes["text"]}>
