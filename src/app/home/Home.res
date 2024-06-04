@@ -1,8 +1,17 @@
 let classes = css("./home.module.css")
 
+let jsonLd: Js.Json.t = {
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Marcos Oliveira",
+  "jobTitle": "UI Engineer",
+  "url": "https://www.marcos.id",
+}->Obj.magic
+
 @react.component
 let make = () => {
   <section className={classes["hero"]}>
+    <script type_="application/ld+json" dangerouslySetInnerHTML={{"__html": Js.Json.stringify(jsonLd)}} />
     <div className={classes["text-container"]}>
       <h1 className={classes["title"]}> {"Marcos Oliveira"->s} </h1>
       <p className={classes["text"]}>
