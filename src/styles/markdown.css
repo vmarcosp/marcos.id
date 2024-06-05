@@ -30,7 +30,7 @@
     animation-delay: var(--animation-delay);
   }
 
-  >h1 {
+  > h1 {
     font-size: var(--title-md);
     font-family: var(--font-serif);
     line-height: 3.2rem;
@@ -41,7 +41,7 @@
     }
   }
 
-  >h2 {
+  > h2 {
     font-size: var(--title-sm);
     font-family: var(--font-serif);
     font-weight: 600;
@@ -53,14 +53,14 @@
     }
   }
 
-  >h3 {
+  > h3 {
     font-size: var(--title-xs);
     font-weight: 500;
     font-family: var(--font-serif);
     margin-top: var(--spacing-4);
   }
 
-  >p {
+  > p {
     font-family: var(--font-sans);
     color: var(--color-200);
     font-size: var(--body-xs);
@@ -74,15 +74,15 @@
     }
   }
 
-  >h1,
-  >h3,
-  >h2,
-  >h4,
-  >h5 {
+  > h1,
+  > h3,
+  > h2,
+  > h4,
+  > h5 {
     color: var(--color-100);
   }
 
-  >pre {
+  > pre {
     color: var(--color-100);
     background-color: #eeeeee;
     padding: var(--spacing-4);
@@ -90,13 +90,13 @@
     font-size: 1.5rem;
     margin-top: var(--spacing-4);
 
-    >code {
+    > code {
       text-wrap: wrap;
     }
   }
 
-  p>code,
-  li>code {
+  p > code,
+  li > code {
     background-color: var(--color-400);
     border-radius: var(--radius-1);
     padding: 4px 4px;
@@ -105,18 +105,18 @@
     font-size: 1.4rem;
   }
 
-  >ul {
+  > ul {
     margin-top: var(--spacing-4);
     padding-left: 16px;
 
-    >li {
+    > li {
       font-size: var(--body-xs);
       font-family: var(--font-sans);
       margin-top: var(--spacing-1);
     }
   }
 
-  >* a {
+  > * a {
     color: var(--color-100);
     text-decoration: underline dotted var(--color-200);
     -webkit-text-decoration: underline dotted var(--color-200);

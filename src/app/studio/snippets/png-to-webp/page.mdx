@@ -2,24 +2,27 @@
 # PNG to WebP
 
 As a UI Engineer taking care of web performance is a daily task. With this in mind, a recurrent task in the projects I work on is to convert
-`.png` files to `.webp`. For years I've tried a many tools, like [Convert IO](https://convertio.co/pt/png-webp/). 
+`.png` files to `.webp`. For years I've tried a many tools, like [Convert IO](https://convertio.co/pt/png-webp/).
 
 However, sometimes I needed to convert a lot of PNG files at the same time, and dragging and dropping them to an website, downloading and moving them to the project's folder
 were quite time-consuming. So, at some point I came across [cwebp](https://developers.google.com/speed/webp/docs/cwebp), which is a basically a CLI to convert
-  `.png` into `.webp` easily:
+`.png` into `.webp` easily:
+
 ```sh
   cwebp -q 100 image.png -o image.webp
 ```
 
 ## The snippet
+
 Okay, now we have a powerful CLI that does the heavy job for us, but it's still time-consuming run the command file-by-file, right? So, I ended up with
 a shell function that converts all `.png` files within a folder into `.webp`:
 
 ```
-function png2webp () {  
-  for file in *; do  
-      cwebp -q 100 "$file" -o "${file%.png}.webp"  
-  done  
+function png2webp () {
+  for file in *; do
+      cwebp -q 100 "$file" -o "${file%.png}.webp"
+  done
 }
 ```
+
 </div>

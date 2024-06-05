@@ -1,3 +1,22 @@
 {
-  "parser": "css"
+  "overrides": [
+    {
+      "files": "*.mdx",
+      "options": {
+        "parser": "mdx"
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "babel"
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css"
+      }
+    }
+  ]
 }
