@@ -1,0 +1,51 @@
+.container {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: #eee;
+    border-radius: var(--radius-1);
+  }
+
+  /* Table header styling */
+  thead th {
+    padding: 10px;
+    font-family: var(--font-serif);
+    font-size: var(--body-xs);
+  }
+
+  /* Table body styling */
+  tbody tr {
+    border-bottom: 1px solid #dddddd;
+    font-family: var(--font-sans);
+    font-size: var(--body-xs);
+    color: var(--color-200);
+  }
+
+  tbody td {
+    padding: 10px;
+  }
+
+  /* Table caption styling */
+  caption {
+    caption-side: top;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  /* Add some spacing to the table */
+  table,
+  th,
+  td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+}
