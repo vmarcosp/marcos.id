@@ -17,7 +17,7 @@ let projects = [
   {
     name: "BetterTmux",
     role: "Creator",
-    description: "A TMUX framework that lets you configure TMUX with TypeScript and React",
+    description: "A TMUX framework that lets you configure TMUX with TypeScript and React.",
     href: "https://github.com/bettervim/better-tmux",
   },
   {
