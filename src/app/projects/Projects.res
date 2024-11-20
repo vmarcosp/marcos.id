@@ -9,6 +9,18 @@ type project = {
 
 let projects = [
   {
+    name: "yugen.nvim",
+    role: "Creator",
+    description: "An elegant and minimalist dark theme for Neovim.",
+    href: "https://github.com/bettervim/yugen.nvim",
+  },
+  {
+    name: "BetterTmux",
+    role: "Creator",
+    description: "A TMUX framework that lets you configure TMUX with TypeScript and React",
+    href: "https://github.com/bettervim/better-tmux",
+  },
+  {
     name: "FastCheckout",
     role: "Engineer",
     description: "VTEX's new Checkout platform as a service.",
