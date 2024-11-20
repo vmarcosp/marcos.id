@@ -71,8 +71,9 @@ let make = () => {
     </div>
     <CardList>
       {snippets
-      ->Array.map(snippet =>
+      ->Array.mapWithIndex((snippet, key) =>
         <Snippet
+          key={key->Int.toString}
           name={snippet.name->s}
           description={snippet.description->s}
           category={snippet.category}

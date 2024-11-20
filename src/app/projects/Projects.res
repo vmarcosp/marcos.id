@@ -97,8 +97,14 @@ let make = () => {
     </div>
     <CardList>
       {projects
-      ->Array.map(({name, role, description, href}) =>
-        <Project name={name->s} role={role->s} description={description->s} href={href} />
+      ->Array.mapWithIndex(({name, role, description, href}, key) =>
+        <Project
+          key={key->Int.toString}
+          name={name->s}
+          role={role->s}
+          description={description->s}
+          href={href}
+        />
       )
       ->React.array}
     </CardList>
