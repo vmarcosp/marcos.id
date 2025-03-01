@@ -1,43 +1,114 @@
 <div className="markdown-container">
-  # Lambda Calculus: What a JavaScript developer actually needs to know
-    
-  While lambda calculus is the foundation of functional programming, I wouldn't have the audacity to 
-  explain it formally, nor attempt to summarize it in a few paragraphs of an article. However, there are some
-  key aspects that you need to know before delving into functional programming concepts.
-
-  In this article, I'll briefly explain the concept (spoiler: I'm not an expert) and navigate through some
-  important parts that I find relevant to your journey in writing functional code in JavaScript.
+# Lambda Calculus: What a JavaScript developer actually needs to know
   
-  ## The history
-  "Lambda calculus was introduced by mathematician Alonzo Church in the 1930s as part of an investigation into the foundations of mathematics". 
-  I think this doesn't say too much right? But I couldn't avoid mentioning. In summary, lambda calculus is a formal system to express computation
-  by using functions.
+While lambda calculus is the foundation of functional programming, I wouldn't have the audacity 
+to explain it formally, nor attempt to summarize it in a few paragraphs. 
+However, if you're familiar with concepts like pure functions or higher-order functions 
+in JavaScript, even a superficial understanding of lambda calculus will make everything click in a way it never has before. 
 
-  "It uses **function abstractions** and **application** using variable **binding** and **substitution**", it seems a bit noisy, right? Let's break down this statement:
+In this article, I'll briefly explain the concept (spoiler: I'm not an expert) and navigate through some
+important parts that I find relevant to your journey in writing functional code in JavaScript.
 
-  ### 1. Function abstraction
+After reading this article you'll understand or be able to:
+- Read and understand simple lambda expressions
+- Understand the origin of core concepts like pure functions, higher-order functions, currying and function composition
+- Encode "if" statements and "boolean" expressions using only lambda notation
 
-  ## Key parts
-  
+## Introduction
+["Lambda calculus was introduced by mathematician Alonzo Church in the 1930s as part of an investigation into the foundations of mathematics"](https://en.wikipedia.org/wiki/Lambda_calculus). 
+I think this doesn't say too much right? But I couldn't avoid mentioning. In summary, lambda calculus is a formal system to express computation
+by using functions.
 
-  <br/>
-  <br/>
-  <hr />
-  <br/>
-  <br/>
-This article is part of the series "From Imperative to Lambdas: Your path to function programming with TypeScript".
-The series is composed of a series of 9 articles:
+Ok, but what the hell is a "formal system to express computation"? From what I understand, 
+it's math's way of doing programming stuff before computers were even invented. Imagine math 
+people in the 1930s trying to answer deep questions about mathematics, but somehow creating 
+the theoretical foundation for that annoying functional programmer who keeps telling you to 
+stop using for loops.
 
-- "Lambda Calculus: What a JavaScript dev actually needs to know"
-- "Pure Functions: Building Blocks of Predictable Code"
-- "Higher-Order Functions: Elevating Your Function Game"
-- "Function Composition: Creating Complex Operations Simply"
-- "Currying and Partial Application: The Art of Function Transformation"
-- "Algebraic Data Types: A Better Way to Model Your Domain"
-- "Understanding Monads: From Theory to Practice"
-- "The Option Monad: Elegant Handling of Optional Values"
-- "The Result Monad: Beyond Traditional Error Handling"
+This approach is simple but powerful: everything is a function, functions can be inputs 
+to other functions, and functions can return other functions. That's it! No arrays, no 
+objects, no primitives, just functions. 
 
+It's like trying to build a skyscraper using only legos of one shape, and somehow it actually works.
 
+### Syntax
+Before we start delving into examples, let me briefly introduce the syntax we'll use 
+throughout this article: **the lambda notation**. Here's a simple but common example that will 
+help you:
 
+```
+λx.M
+```
+Shortly, the above syntax represents:
+
+1. `λ` indicates that we're defining a function. This is the lambda sign 
+(if you've played Half-Life, you've seen this symbol a lot, right? 😅)
+
+2. `x` represents an input of our function. We'll cover functions with "multiple" 
+parameters later but spoiler: a function can have only one input/parameter at a time.
+
+3. `M` is the expression where we'll use the `x` parameter. For example, 
+to return `x + 1`, got it?
+
+If we compare with JavaScript will be something like:
+```
+x => M
+```
+
+Remember when arrow functions were [released](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)? This is not a coincidence, arrows are "lambdas".
+
+## Moving forward
+If we look at the forma definition it says that "It uses **function abstractions** and **application** using variable **binding** and **substitution**", but it seems a bit noisy, right? Let's break down this statement:
+
+#### 1. Function abstraction
+No secrets here. It's just the process of defining a function. You know how to do this in JavaScript, right? Let's define a function together:
+```
+λx.x+1
+```
+In JavaScript it'll be something like this:
+```
+x => x + 1
+```
+
+#### 2. Application
+Here, we apply the arguments to the functions:
+```
+(λx.x+1)5
+```
+In JavaScript:
+```
+(x => x + 1)(5)
+```
+
+#### 3. Variable binding
+This is a bit tricky to compare with JavaScript. In summary, if we look at 
+the `λx.x+y`, we can say that `x` is a bound variable but the `y` is a free variable. In JavaScript will be:
+```
+x => ...body...
+```
+#### 4. Substitution
+At this step, we'll replace the bound variables during the function application.
+ When you apply a function to an argument, you substitute the argument for the bound variable throughout the function body:
+```
+[5/x].(x+1)
+```
+In JavaScript:
+```
+5 + 1
+```
+
+Now, to better understand the whole process in lambda, we'll do what we usually do with math equations:
+```
+(λx.x+1)5    // Application
+[5/x](x+1)   // Substitute 5 for x
+5+1          // Result after substitution
+6            // Result
+```
+
+In JavaScript:
+```
+(x => x+1)(5)  // Application
+5+1            // Substitution
+6              // Result
+```
 </div>

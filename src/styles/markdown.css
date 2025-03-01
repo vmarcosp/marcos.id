@@ -60,7 +60,14 @@
     margin-top: var(--spacing-4);
   }
 
-  > p {
+  > h4 {
+    font-size: var(--body);
+    font-weight: 500;
+    font-family: var(--font-serif);
+    margin-top: var(--spacing-4);
+  }
+
+  p {
     font-family: var(--font-sans);
     color: var(--color-200);
     font-size: var(--body-xs);
@@ -105,11 +112,13 @@
     font-size: 1.4rem;
   }
 
-  > ul {
+  > ul,
+  > ol {
     margin-top: var(--spacing-4);
     padding-left: 16px;
 
     > li {
+      color: var(--color-200);
       font-size: var(--body-xs);
       font-family: var(--font-sans);
       margin-top: var(--spacing-1);
