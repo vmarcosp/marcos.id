@@ -32,6 +32,7 @@ let make = () => {
         <NavLink href="/"> {"About"->s} </NavLink>
         <NavLink href="/projects"> {"Projects"->s} </NavLink>
         <NavLink href="/studio/snippets"> {"Snippets"->s} </NavLink>
+        <NavLink href="/featured"> {"Featured"->s} </NavLink>
       </NavList>
     </nav>
   </header>
