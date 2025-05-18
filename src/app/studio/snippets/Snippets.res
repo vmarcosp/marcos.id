@@ -64,7 +64,7 @@ let make = () => {
   <section className={classes["container"]}>
     <JsonLd json={jsonLd} />
     <div className={classes["text-container"]}>
-      <h1 className={classes["title"]}> {"Snippets"->s} </h1>
+      <h1 className={classes["title"]}> {"Snippets."->s} </h1>
       <p className={classes["text"]}>
         {"Quick and minimalist solutions for TypeScript, ReScript, React, Shell, TMUX, Neovim, and Lua. Snippets I couldn't live without."->s}
       </p>
