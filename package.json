@@ -19,7 +19,7 @@
     "@rescript/core": "1.6.1",
     "@rescript/react": "0.13.1",
     "@vercel/speed-insights": "1.2.0",
-    "next": "15.3.2",
+    "next": "15.3.8",
     "react": "19",
     "react-dom": "19",
     "rescript": "11.1.4"
