@@ -12,6 +12,9 @@ const withMDX = nextMDX({
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx'],
   output: 'export',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default withMDX(nextConfig);
