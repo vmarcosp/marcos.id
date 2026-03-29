@@ -59,8 +59,3 @@ module GoogleAnalytics = {
   external make: React.component<props> = "GoogleAnalytics"
 }
 
-module SpeedInsights = {
-  type props = {}
-  @module("@vercel/speed-insights/next")
-  external make: React.component<props> = "SpeedInsights"
-}

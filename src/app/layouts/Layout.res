@@ -31,7 +31,6 @@ let make = (~children) => {
     }}
     <body className={clsx(["light", classes["container"]])}>
       <Fonts.Script />
-      <Next.SpeedInsights />
       <Header />
       <main> {children} </main>
       <Footer />
