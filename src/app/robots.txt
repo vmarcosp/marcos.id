@@ -1,6 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /private/
-
-Sitemap: https://www.marcos.id/sitemap.xml
-Host: https://www.marcos.id/

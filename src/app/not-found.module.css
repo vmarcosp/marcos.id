@@ -1,0 +1,17 @@
+.container {
+  margin-top: var(--spacing-14);
+
+  @media (min-width: 768px) {
+    margin-top: var(--spacing-18);
+  }
+}
+
+.title {
+  font-size: var(--title-sm);
+  font-family: var(--font-serif);
+  color: var(--color-100);
+}
+
+.text {
+  margin-top: var(--spacing-4);
+}

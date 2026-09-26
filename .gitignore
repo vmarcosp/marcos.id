@@ -37,4 +37,4 @@ next-env.d.ts
 
 ## rescript
 *.res.js
-lib/
+/lib/

@@ -1,0 +1,256 @@
+.article {
+  --container-translate-y: 5%;
+  margin-top: var(--spacing-14);
+  /* ch follows this size, not the 10px root. 56ch lands near 70 characters in DM Sans. */
+  font-size: var(--body-xs);
+  max-width: 56ch;
+  color-scheme: light;
+
+  @keyframes container-fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes container-slidein {
+    from {
+      transform: translateY(var(--container-translate-y));
+    }
+
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(var(--container-translate-y));
+    opacity: 0;
+    animation:
+      container-fadein var(--animation-fadein-duration) forwards,
+      container-slidein var(--animation-slidein-duration) forwards;
+    animation-delay: var(--animation-delay);
+  }
+
+  @media (min-width: 768px) {
+    margin-top: var(--spacing-18);
+    font-size: var(--body);
+  }
+
+  ::selection {
+    background: var(--color-100);
+    color: var(--color-600);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: var(--title-md);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 3.2rem;
+  color: var(--color-100);
+  text-wrap: balance;
+}
+
+.meta {
+  margin-top: var(--spacing-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2) var(--spacing-4);
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-200);
+}
+
+.lede {
+  margin-top: var(--spacing-6);
+  font-family: var(--font-sans);
+  font-size: var(--body-xs);
+  line-height: 2.8rem;
+  letter-spacing: -0.1px;
+  color: var(--color-200);
+  text-wrap: pretty;
+
+  @media (min-width: 768px) {
+    font-size: var(--body);
+  }
+}
+
+.prose {
+  margin-top: var(--spacing-8);
+  font-family: var(--font-sans);
+  font-size: var(--body-xs);
+  line-height: 1.7;
+  color: var(--color-200);
+  text-wrap: pretty;
+
+  @media (min-width: 768px) {
+    font-size: var(--body);
+    line-height: 1.7;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > p,
+  > ul,
+  > ol,
+  > pre,
+  > blockquote,
+  > table,
+  > hr,
+  > img {
+    margin-top: var(--spacing-6);
+  }
+
+  > h2,
+  > h3,
+  > h4 {
+    font-family: var(--font-serif);
+    color: var(--color-100);
+    text-wrap: balance;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-2);
+  }
+
+  > h2 {
+    font-size: var(--title-xs);
+    font-weight: 600;
+    margin-top: var(--spacing-12);
+  }
+
+  > h3 {
+    font-size: var(--body);
+    font-weight: 600;
+    margin-top: var(--spacing-8);
+  }
+
+  > h4 {
+    font-size: var(--body-xs);
+    font-weight: 600;
+    margin-top: var(--spacing-6);
+  }
+
+  a {
+    color: var(--color-100);
+    text-decoration: underline dotted var(--color-200);
+    text-underline-offset: var(--spacing-1);
+    outline-offset: var(--spacing-1);
+    border-radius: var(--radius-1);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: text-decoration-color 200ms;
+    }
+
+    &:hover {
+      text-decoration-color: var(--color-100);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-100);
+    }
+  }
+
+  strong {
+    color: var(--color-100);
+    font-weight: 700;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.2em;
+  }
+
+  li {
+    padding-left: 0.3em;
+  }
+
+  li + li {
+    margin-top: var(--spacing-2);
+  }
+
+  li > p {
+    margin-top: var(--spacing-2);
+  }
+
+  blockquote {
+    padding-left: var(--spacing-4);
+    border-left: 1px solid var(--color-400);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--color-400);
+  }
+
+  pre {
+    color: var(--color-100);
+    background-color: #eeeeee;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-1-5);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+
+  pre code {
+    font-family: inherit;
+    font-size: inherit;
+    white-space: inherit;
+    overflow-wrap: anywhere;
+  }
+
+  :not(pre) > code {
+    background-color: var(--color-400);
+    border-radius: var(--radius-1);
+    padding: 0.2rem 0.4rem;
+    font-weight: 500;
+    color: var(--color-100);
+    font-size: 0.9em;
+    font-family: inherit;
+  }
+
+  img {
+    height: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+  }
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: top;
+    padding: var(--spacing-2) var(--spacing-3) var(--spacing-2) 0;
+    border-bottom: 1px solid var(--color-400);
+  }
+
+  th {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--color-100);
+  }
+
+  input[type="checkbox"] {
+    accent-color: var(--color-100);
+  }
+}
+
+.back {
+  margin-top: var(--spacing-12);
+}

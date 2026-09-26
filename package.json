@@ -18,9 +18,13 @@
     "@next/third-parties": "16.3.6",
     "@rescript/react": "0.15.0",
     "@rescript/runtime": "12.3.1",
+    "gray-matter": "4.0.3",
     "next": "16.3.6",
+    "next-mdx-remote": "6.0.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
+    "rehype-slug": "6.0.0",
+    "remark-gfm": "4.0.1",
     "rescript": "12.3.1"
   },
   "devDependencies": {
@@ -29,6 +33,9 @@
     "prettier": "3.9.9"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["rescript", "sharp"]
+    "onlyBuiltDependencies": [
+      "rescript",
+      "sharp"
+    ]
   }
 }

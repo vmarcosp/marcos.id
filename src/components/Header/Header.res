@@ -7,7 +7,10 @@ module NavLink = {
   @react.component
   let make = (~children, ~target=?, ~href) => {
     let pathname = Next.Navigation.usePathname()
-    let isActive = pathname === href
+    let isActive = switch href {
+    | "/" => pathname === "/"
+    | _ => pathname === href || pathname->String.startsWith(href ++ "/")
+    }
     let className = switch isActive {
     | true => clsx([classes["navlink"], classes["navlink-active"]])
     | false => classes["navlink"]
