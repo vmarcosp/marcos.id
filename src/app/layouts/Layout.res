@@ -1,5 +1,5 @@
-_import("@/styles/global.css")
-_import("@/styles/markdown.css")
+%%raw(`import "@/styles/global.css"`)
+%%raw(`import "@/styles/markdown.css"`)
 
 let classes = css("./layout.module.css")
 

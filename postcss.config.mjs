@@ -2,8 +2,8 @@
 const config = {
   plugins: {
     autoprefixer: {},
-    "postcss-nested": {}
-  }
+    "postcss-nested": {},
+  },
 }
 
-module.exports = config
+export default config

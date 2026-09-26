@@ -10,6 +10,7 @@ const withMDX = nextMDX({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  agentRules: false,
   pageExtensions: ['js', 'jsx', 'mdx'],
   output: 'export',
   images: {

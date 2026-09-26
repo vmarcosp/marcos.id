@@ -59,7 +59,7 @@
   hyphens: auto;
 
   @media (min-width: 768px) {
-    margin-bottom: var(spacing--6);
+    margin-bottom: var(--spacing-6);
     font-size: var(--body);
   }
 

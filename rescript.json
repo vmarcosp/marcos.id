@@ -1,27 +1,19 @@
 {
-  "name": "site",
+  "name": "marcos.to",
   "sources": [
     {
       "dir": "src",
       "subdirs": true
     }
   ],
-  "package-specs": [
-    {
-      "module": "esmodule",
-      "in-source": true
-    }
-  ],
+  "package-specs": {
+    "module": "esmodule",
+    "in-source": true
+  },
   "jsx": {
     "version": 4
   },
   "suffix": ".res.js",
-  "bs-dependencies": [
-    "@rescript/core",
-    "@rescript/react"
-  ],
-  "bsc-flags": [
-    "-open RescriptCore",
-    "-open ShienBelt"
-  ]
+  "dependencies": ["@rescript/react"],
+  "compiler-flags": ["-open ShienBelt"]
 }

@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "rs:dev": "rescript build -w",
-    "rs:build": "rescript build",
+    "rs:dev": "rescript watch",
+    "rs:build": "rescript",
     "dev": "next dev",
     "build": "pnpm rs:build && next build",
     "start": "next start",
@@ -12,20 +12,23 @@
     "format": "pnpm prettier ./src/**/*.{js,mdx,css} --write"
   },
   "dependencies": {
-    "@mdx-js/loader": "3.1.0",
-    "@mdx-js/react": "3.1.0",
-    "@next/mdx": "15.3.2",
-    "@next/third-parties": "15.3.2",
-    "@rescript/core": "1.6.1",
-    "@rescript/react": "0.13.1",
-    "next": "15.3.2",
-    "react": "19",
-    "react-dom": "19",
-    "rescript": "11.1.4"
+    "@mdx-js/loader": "3.1.1",
+    "@mdx-js/react": "3.1.1",
+    "@next/mdx": "16.3.6",
+    "@next/third-parties": "16.3.6",
+    "@rescript/react": "0.15.0",
+    "@rescript/runtime": "12.3.1",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "rescript": "12.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.21",
-    "postcss-nested": "7.0.2",
-    "prettier": "3.5.3"
+    "autoprefixer": "10.6.1",
+    "postcss-nested": "8.0.1",
+    "prettier": "3.9.9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["rescript", "sharp"]
   }
 }
