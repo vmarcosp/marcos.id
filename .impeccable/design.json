@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T19:25:00-03:00",
+  "title": "Design System: Marcos Oliveira",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(19.6% 0.000 89.9)",
+        "tonalRamp": ["#0b0b0b", "#242424", "#424243", "#636363", "#868686", "#ababab", "#d1d1d2", "#eeeeef"]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(46.8% 0.000 89.9)",
+        "tonalRamp": ["#0b0b0b", "#242424", "#424243", "#636363", "#868686", "#ababab", "#d1d1d2", "#eeeeef"]
+      },
+      "ash": {
+        "role": "neutral",
+        "displayName": "Ash",
+        "canonical": "oklch(54.5% 0.000 89.9)",
+        "tonalRamp": ["#0b0b0b", "#242424", "#424243", "#636363", "#868686", "#ababab", "#d1d1d2", "#eeeeef"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(91.3% 0.000 89.9)",
+        "tonalRamp": ["#0b0b0b", "#242424", "#424243", "#636363", "#868686", "#ababab", "#d1d1d2", "#eeeeef"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(97.9% 0.000 89.9)",
+        "tonalRamp": ["#0b0b0b", "#242424", "#424243", "#636363", "#868686", "#ababab", "#d1d1d2", "#eeeeef"]
+      },
+      "paper-bright": {
+        "role": "neutral",
+        "displayName": "Bright Paper",
+        "canonical": "oklch(98.5% 0.000 89.9)",
+        "tonalRamp": ["#0b0b0b", "#242424", "#424243", "#636363", "#868686", "#ababab", "#d1d1d2", "#eeeeef"]
+      },
+      "code-well": {
+        "role": "neutral",
+        "displayName": "Code Well",
+        "canonical": "oklch(94.9% 0.000 89.9)",
+        "tonalRamp": ["#0b0b0b", "#242424", "#424243", "#636363", "#868686", "#ababab", "#d1d1d2", "#eeeeef"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name on the about page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles on projects, featured, and snippets."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "The name of a project, talk, or snippet in a row."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explanations and row descriptions in DM Sans."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Category chips. Row roles use the same face at 1.6rem."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "fade-in",
+        "value": "900ms",
+        "purpose": "Opacity half of the load arrival."
+      },
+      {
+        "name": "slide-in",
+        "value": "600ms",
+        "purpose": "Translate half of the load arrival."
+      },
+      {
+        "name": "arrival-delay",
+        "value": "10ms",
+        "purpose": "Shared delay before the load arrival."
+      },
+      {
+        "name": "state",
+        "value": "200ms ease",
+        "purpose": "Nav tick, link color, and row shift."
+      },
+      {
+        "name": "press",
+        "value": "100ms ease",
+        "purpose": "Nav background on press."
+      }
+    ],
+    "breakpoints": [
+      { "name": "nav-row", "value": "470px" },
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Text link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Dotted serif link used in prose and the footer.",
+      "html": "<a class=\"ds-link\" href=\"#work\">VTEX</a>",
+      "css": ".ds-link { color: var(--color-200, #5a5a5a); font-family: var(--font-serif, \"Recoleta\"), Georgia, serif; font-size: 16px; text-decoration: underline dotted var(--color-200, #5a5a5a); text-underline-offset: 4px; border-radius: 6px; transition: color 200ms, text-decoration-color 200ms; } .ds-link:hover { color: var(--color-100, #151515); text-decoration-color: var(--color-100, #151515); } .ds-link:focus-visible { outline-color: var(--color-100, #151515); outline-offset: 4px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Serif menu. The current route keeps a 16 by 2 pixel tick.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Site menu\"><a class=\"ds-navlink\" href=\"#about\">About</a><a class=\"ds-navlink ds-navlink-active\" href=\"#projects\" aria-current=\"page\">Projects</a><a class=\"ds-navlink\" href=\"#snippets\">Snippets</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 16px; align-items: center; } .ds-navlink { position: relative; color: var(--color-200, #5a5a5a); font-family: var(--font-serif, \"Recoleta\"), Georgia, serif; font-size: 18px; font-weight: 400; text-decoration: none; border-radius: 6px; padding: 8px; transition: background-color 100ms; } .ds-navlink::after { content: \"\"; position: absolute; left: 50%; bottom: 0; width: 16px; height: 2px; border-radius: 8px; background: var(--color-200, #5a5a5a); transform: translateX(-50%) scale(0); transition: transform 200ms; } .ds-navlink:hover::after { transform: translateX(-50%) scale(1); } .ds-navlink:focus-visible { outline-color: var(--color-100, #151515); } .ds-navlink:active { background: var(--color-500, #f8f8f8); } .ds-navlink-active { color: var(--color-100, #151515); } .ds-navlink-active::after { background: var(--color-100, #151515); transform: translateX(-50%) scale(1); }"
+    },
+    {
+      "name": "List row",
+      "kind": "card",
+      "refersTo": "list-row",
+      "description": "A project, talk, or snippet. Hairline below, no shadow.",
+      "html": "<article class=\"ds-row\"><div class=\"ds-row-header\"><h2>BetterVim</h2><span>co-Creator</span></div><p>Neovim distribution as a service.</p></article>",
+      "css": ".ds-row { display: flex; flex-direction: column; gap: 8px; padding: 12px; border-bottom: 1px solid var(--color-400, #e2e2e2); transition: transform 200ms; } .ds-row:hover { transform: translateX(6px); } .ds-row-header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; } .ds-row h2 { margin: 0; font-family: var(--font-serif, \"Recoleta\"), Georgia, serif; font-size: 18px; font-weight: 600; color: var(--color-100, #151515); } .ds-row-header span { font-family: var(--font-serif, \"Recoleta\"), Georgia, serif; font-size: 16px; font-weight: 500; color: var(--color-200, #5a5a5a); } .ds-row p { margin: 0; font-family: var(--font-sans, \"DM Sans\"), sans-serif; font-size: 16px; color: var(--color-200, #5a5a5a); }"
+    },
+    {
+      "name": "Category chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Snippet category. Ink fill, bright paper text.",
+      "html": "<span class=\"ds-chip\">Shell</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; justify-content: center; background: var(--color-100, #151515); color: var(--color-600, #fafafa); font-family: var(--font-serif, \"Recoleta\"), Georgia, serif; font-size: 14px; font-weight: 600; padding: 4px; border-radius: 2px; }"
+    },
+    {
+      "name": "Code block",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Fenced snippet on the code-well ground.",
+      "html": "<pre class=\"ds-code\"><code>cwebp -q 100 image.png -o image.webp</code></pre>",
+      "css": ".ds-code { margin: 0; color: var(--color-100, #151515); background: #eeeeee; padding: 16px; border-radius: 6px; font-size: 15px; } .ds-code code { white-space: pre-wrap; }"
+    },
+    {
+      "name": "Inline code",
+      "kind": "custom",
+      "refersTo": "inline-code",
+      "description": "A token inside a sentence, on the hairline ground.",
+      "html": "<p class=\"ds-prose\">Convert <code class=\"ds-inline-code\">.png</code> files to <code class=\"ds-inline-code\">.webp</code>.</p>",
+      "css": ".ds-prose { margin: 0; font-family: var(--font-sans, \"DM Sans\"), sans-serif; font-size: 16px; color: var(--color-200, #5a5a5a); } .ds-inline-code { background: var(--color-400, #e2e2e2); color: var(--color-100, #151515); border-radius: 4px; padding: 4px; font-weight: 500; font-size: 14px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Index",
+    "overview": "The name is read off the site that is already shipping: a narrow paper column, serif names, and lists separated by hairlines. This file records that system.\n\nThe page is one column, 824px at most, on a near-white paper ground. Recoleta carries the name, the navigation, and every title. DM Sans carries the explanation. Ink sits just off pure black, and there is no second hue. Density is a typeset index: a short title, a lede, then rows.\n\nNothing lifts. Rules are 1px hairlines. Motion is an arrival, a fade and a short rise when the page loads, and it is removed when the visitor prefers reduced motion. After that the page is still, except a nav tick and a row that shifts 6px on hover from 768px up.",
+    "keyCharacteristics": [
+      "Monochrome paper and ink",
+      "Recoleta for names, DM Sans for prose",
+      "An 824px column",
+      "Hairline lists and no shadows",
+      "One arrival animation, then stillness"
+    ],
+    "rules": [
+      {
+        "name": "The One Ink Rule",
+        "body": "Soft Ink is the only strong color. It marks the name, the active item, a stressed word, and the chip. A second hue is not part of this system.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ten-Pixel Root Rule",
+        "body": "html font-size stays 10px. Rem tokens in this file assume that root. Changing it rescales the whole site.",
+        "section": "typography"
+      },
+      {
+        "name": "The Serif for Names Rule",
+        "body": "Recoleta carries identity: the name, navigation, titles, roles, and chips. DM Sans carries explanation. Do not swap them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Column Rule",
+        "body": "Readable content stays in the 824px column. Do not open a second content column or a full-bleed band.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Paper Rule",
+        "body": "Surfaces do not cast shadows. If a new element needs to separate, use a hairline or type, not a shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Arrival Rule",
+        "body": "Each region fades and rises once on load (fade 900ms, slide 600ms, delay 10ms). prefers-reduced-motion: reduce removes that entrance. Nothing else animates in.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the page on Paper, write primary text in Soft Ink, and write secondary text in Graphite.",
+      "Do set names, navigation, and titles in Recoleta, and explanations in DM Sans.",
+      "Do keep the column at 824px and separate rows with a 1px Hairline.",
+      "Do honor prefers-reduced-motion. The load fade and slide are the only entrance."
+    ],
+    "donts": [
+      "Don't introduce a chromatic accent, a gradient, or a shadow.",
+      "Don't add a second display face. Recoleta is the only serif.",
+      "Don't treat 1rem as 16px. The root is 10px, so 1.6rem is 16px.",
+      "Don't wrap a list row in an elevated card. The row is the surface, and the hairline is the edge.",
+      "Don't add motion after arrival, beyond the nav tick and the 6px row shift from 768px up."
+    ]
+  }
+}
