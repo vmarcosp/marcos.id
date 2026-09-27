@@ -36,6 +36,9 @@
     "onlyBuiltDependencies": [
       "rescript",
       "sharp"
-    ]
+    ],
+    "overrides": {
+      "serialize-javascript": "7.0.5"
+    }
   }
 }
